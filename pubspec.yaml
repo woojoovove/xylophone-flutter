@@ -12,6 +12,7 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   english_words: ^4.0.0
+  just_audio: ^0.9.37
   # Use Audioplayers dependency version 0.17.4
 
 dev_dependencies:
