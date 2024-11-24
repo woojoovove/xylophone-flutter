@@ -4,6 +4,12 @@ import 'package:just_audio/just_audio.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
+  Future<void> playSound() async {
+    final player = AudioPlayer();
+    await player.setUrl('asset:/assets/note1.wav');
+    player.play();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,12 +20,7 @@ class XylophoneApp extends StatelessWidget {
               children: [
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.red),
-                  onPressed: () async {
-                    final player = AudioPlayer();
-                    final duration =
-                        await player.setUrl('asset:/assets/note1.wav');
-                    player.play();
-                  },
+                  onPressed: playSound,
                   child: Text(''),
                 ),
                 TextButton(
@@ -34,53 +35,28 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.yellow),
-                  onPressed: () async {
-                    final player = AudioPlayer();
-                    final duration =
-                        await player.setUrl('asset:/assets/note3.wav');
-                    player.play();
-                  },
+                  onPressed: playSound,
                   child: Text(''),
                 ),
                 TextButton(
                   style:
                       TextButton.styleFrom(backgroundColor: Colors.lightGreen),
-                  onPressed: () async {
-                    final player = AudioPlayer();
-                    final duration =
-                        await player.setUrl('asset:/assets/note4.wav');
-                    player.play();
-                  },
+                  onPressed: playSound,
                   child: Text(''),
                 ),
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.green),
-                  onPressed: () async {
-                    final player = AudioPlayer();
-                    final duration =
-                        await player.setUrl('asset:/assets/note5.wav');
-                    player.play();
-                  },
+                  onPressed: playSound,
                   child: Text(''),
                 ),
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                  onPressed: () async {
-                    final player = AudioPlayer();
-                    final duration =
-                        await player.setUrl('asset:/assets/note6.wav');
-                    player.play();
-                  },
+                  onPressed: playSound,
                   child: Text(''),
                 ),
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.purple),
-                  onPressed: () async {
-                    final player = AudioPlayer();
-                    final duration =
-                        await player.setUrl('asset:/assets/note7.wav');
-                    player.play();
-                  },
+                  onPressed: playSound,
                   child: Text(''),
                 ),
               ],
