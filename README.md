@@ -1,27 +1,16 @@
-![App Brewery Banner](https://github.com/londonappbrewery/Images/blob/master/AppBreweryBanner.png)
-
-
 # Xylophone 🎹
 
-## Our Goal
-
-In this tutorial we will be diving into more Dart programming concepts and learning how to use open source Flutter packages. By the end of this module, you should be comfortable using Flutter packages and building repeated widgets.
+![Screenshot_20241124_115800](https://github.com/user-attachments/assets/35687381-1c0d-4fbb-971e-0df2098c2989)
 
 
-## What you will create
+## App Introduction
 
-We’re going to make a music app that plays Xylophone sounds. For every Beethoven out there, this will let you unleash your musical talent where ever you are. 
+7-note-Xylophone in Flutter
 
-![Finished App](https://github.com/londonappbrewery/Images/blob/master/xylophone-flutter.png)
+## What I learned throughout this project
 
-## What you will learn
-
-- How to incorporate open source libraries of code into your project using Flutter Packages.
-- How to play sound on both iOS and Android.
-- How to generate repeated user interface Widgets.
-- How to use Dart functions that can take input arguments as well as return an output.
-- Dart arrow syntax for writing one line functions.
-
->This is a companion project to The App Brewery's Complete Flutter Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
-
-![End Banner](https://github.com/londonappbrewery/Images/blob/master/readme-end-banner.png)
+- How to define a function with arguments and return type
+- How to define function arguments with names
+- How to utilize flutter packages from the flutter lib repository
+- How to read inline function declaration
+- How to override button style
