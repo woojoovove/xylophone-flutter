@@ -14,54 +14,59 @@ class XylophoneApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SafeArea(
-          child: Center(
-            child: Column(
-              children: [
-                TextButton(
-                  style: TextButton.styleFrom(backgroundColor: Colors.red),
-                  onPressed: () => playSound(1),
-                  child: Text(''),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(backgroundColor: Colors.orange),
-                  onPressed: () async {
-                    final player = AudioPlayer();
-                    final duration =
-                        await player.setUrl('asset:/assets/note2.wav');
-                    player.play();
-                  },
-                  child: Text(''),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(backgroundColor: Colors.yellow),
-                  onPressed: () => playSound(2),
-                  child: Text(''),
-                ),
-                TextButton(
-                  style:
-                      TextButton.styleFrom(backgroundColor: Colors.lightGreen),
-                  onPressed: () => playSound(3),
-                  child: Text(''),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(backgroundColor: Colors.green),
-                  onPressed: () => playSound(4),
-                  child: Text(''),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                  onPressed: () => playSound(5),
-                  child: Text(''),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(backgroundColor: Colors.purple),
-                  onPressed: () => playSound(6),
-                  child: Text(''),
-                ),
-              ],
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.red),
+                onPressed: () => playSound(1),
+                child: Text(''),
+              ),
             ),
-          ),
+            Expanded(
+              child: TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.orange),
+                onPressed: () => playSound(2),
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.yellow),
+                onPressed: () => playSound(3),
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.lightGreen),
+                onPressed: () => playSound(4),
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.green),
+                onPressed: () => playSound(5),
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.blue),
+                onPressed: () => playSound(6),
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                style: TextButton.styleFrom(backgroundColor: Colors.purple),
+                onPressed: () => playSound(7),
+                child: Text(''),
+              ),
+            ),
+          ],
         ),
       ),
     );
