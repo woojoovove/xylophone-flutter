@@ -4,9 +4,9 @@ import 'package:just_audio/just_audio.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
-  Future<void> playSound() async {
+  Future<void> playSound(int noteNumber) async {
     final player = AudioPlayer();
-    await player.setUrl('asset:/assets/note1.wav');
+    await player.setUrl('asset:/assets/note$noteNumber.wav');
     player.play();
   }
 
@@ -20,7 +20,7 @@ class XylophoneApp extends StatelessWidget {
               children: [
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.red),
-                  onPressed: playSound,
+                  onPressed: () => playSound(1),
                   child: Text(''),
                 ),
                 TextButton(
@@ -35,28 +35,28 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.yellow),
-                  onPressed: playSound,
+                  onPressed: () => playSound(2),
                   child: Text(''),
                 ),
                 TextButton(
                   style:
                       TextButton.styleFrom(backgroundColor: Colors.lightGreen),
-                  onPressed: playSound,
+                  onPressed: () => playSound(3),
                   child: Text(''),
                 ),
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.green),
-                  onPressed: playSound,
+                  onPressed: () => playSound(4),
                   child: Text(''),
                 ),
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                  onPressed: playSound,
+                  onPressed: () => playSound(5),
                   child: Text(''),
                 ),
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.purple),
-                  onPressed: playSound,
+                  onPressed: () => playSound(6),
                   child: Text(''),
                 ),
               ],
