@@ -10,6 +10,19 @@ class XylophoneApp extends StatelessWidget {
     player.play();
   }
 
+  Expanded buildKey(Color color, int noteNumber) {
+    return Expanded(
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: color,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        ),
+        onPressed: () => playSound(noteNumber),
+        child: Text(''),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,83 +31,13 @@ class XylophoneApp extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.red,
-                  shape:
-                      RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                ),
-                onPressed: () => playSound(1),
-                child: Text(''),
-              ),
-            ),
-            Expanded(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.orange,
-                  shape:
-                      RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                ),
-                onPressed: () => playSound(2),
-                child: Text(''),
-              ),
-            ),
-            Expanded(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.yellow,
-                  shape:
-                      RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                ),
-                onPressed: () => playSound(3),
-                child: Text(''),
-              ),
-            ),
-            Expanded(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.lightGreen,
-                  shape:
-                      RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                ),
-                onPressed: () => playSound(4),
-                child: Text(''),
-              ),
-            ),
-            Expanded(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  shape:
-                      RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                ),
-                onPressed: () => playSound(5),
-                child: Text(''),
-              ),
-            ),
-            Expanded(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  shape:
-                      RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                ),
-                onPressed: () => playSound(6),
-                child: Text(''),
-              ),
-            ),
-            Expanded(
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.purple,
-                  shape:
-                      RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                ),
-                onPressed: () => playSound(7),
-                child: Text(''),
-              ),
-            ),
+            buildKey(Colors.red, 1),
+            buildKey(Colors.orange, 2),
+            buildKey(Colors.yellow, 3),
+            buildKey(Colors.lightGreen, 4),
+            buildKey(Colors.green, 5),
+            buildKey(Colors.blue, 6),
+            buildKey(Colors.purple, 7),
           ],
         ),
       ),
